@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Getter
 @ToString
 @NoArgsConstructor
-@Table(name = "")
+@Table(name = "dev")
 @DiscriminatorValue("DEV")
 public class Dev extends Employee {
 

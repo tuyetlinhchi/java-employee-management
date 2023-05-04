@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/lumen/bootstrap.min.css" integrity="sha512-Y6hbhfksNvY29oe7NsJ4ED55Gi0iFDfphe/gDNbOqHce+qMt+G1FSy48+zoy2ZSwbwdLWABtVKI+ZgrInCFvHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<nav class="navbar navbar-light bg-light  mb-5 ">
+  <a class="navbar-brand mx-3" th:href="@{/}"> Add Dev</a>
+
+</nav>
+<div class="container w-50">
+
+
+
+  <form action="#" th:action="@{/saveManager}" th:object="${manager}"
+        method="POST">
+    <input type="text" th:field="*{title}" placeholder="Job Title"
+           class="form-control mb-4 col-4 p-3">
+    <input type="text" th:field="*{name}" placeholder="Manager Name"
+           class="form-control mb-4 col-4 p-3">
+    <input type="text" th:field="*{email}" placeholder="Manager Email"
+           class="form-control mb-4 col-4 p-3">
+    <input type="number" th:field="*{salary}" placeholder="Manager Salary"
+           class="form-control mb-4 col-4 p-3">
+    <input type="text" th:field="*{project}" placeholder="Manager Project"
+           class="form-control mb-4 col-4 p-3">
+    <!--            <input type="radio" id="html" name="role" value="HTML" class="mb-4 p-3">-->
+    <!--            <label for="html">Manager</label><br>-->
+    <!--            <input type="radio" id="css" name="role" value="CSS" class="mb-4 p-3">-->
+    <!--            <label for="css">Dev</label><br>-->
+    <button type="submit" class="btn btn-info col-2">Save
+    </button>
+  </form>
+
+
+
+</div>
+</body>
+</html>

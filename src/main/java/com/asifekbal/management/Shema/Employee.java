@@ -24,7 +24,8 @@ public  class Employee {
     protected String email;
     protected String title;
     protected Long salary;
-     
+    @Column(name="dtype", insertable = false, updatable = false)
+    protected String dtype;
     public long getId() {
         return id;
     }

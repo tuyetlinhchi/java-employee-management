@@ -1,5 +1,4 @@
 package com.asifekbal.management.Controller;
-import com.asifekbal.management.Service.EmployeeServiceImplement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,15 +15,15 @@ public class DevController {
     @Autowired
     private DevServiceImplement devServiceImplement;
 
-//    @GetMapping("/")
-//    public String viewHomePage(Model model) {
-//
-//        model.addAttribute("allemplist", devServiceImplement.getDev());
-//
-//        return "index";
-//    }
+    @GetMapping("/getDev")
+    public String viewAllDev(Model model) {
 
-    @GetMapping("/addnewDev")
+        model.addAttribute("allemplist", devServiceImplement.getDev());
+
+        return "devTable";
+    }
+
+    @GetMapping("/addNewDev")
     public String addNewDev(Model model) {
         Dev dev = new Dev();
         model.addAttribute("dev", dev);
